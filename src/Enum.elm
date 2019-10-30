@@ -1,4 +1,4 @@
-module Enum exposing (Enum, decoder, encoder, find, make)
+module Enum exposing (Enum, decoder, encoder, find, make, toString)
 
 import Json.Decode as Decode exposing (Decoder)
 import Json.Encode as Encode exposing (Value)
@@ -11,6 +11,11 @@ type Enum a
 make : List a -> (a -> String) -> Enum a
 make vals toString =
     Enum vals toString
+
+
+toString : Enum a -> a -> String
+toString (Enum _ toString) val =
+    toString val
 
 
 find : Enum a -> String -> Maybe a
@@ -35,6 +40,6 @@ decoder enum =
 
 
 encoder : Enum a -> a -> Value
-encoder (Enum _ toString) val =
-    toString val
+encoder enum val =
+    toString enum val
         |> Encode.string
