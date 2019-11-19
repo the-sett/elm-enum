@@ -1,3 +1,9 @@
+# Deprecated
+
+This package has been deprecated in favor of `the-sett/elm-refine`:
+
+https://package.elm-lang.org/packages/the-sett/elm-refine/latest/
+
 # elm-enum
 
 Provides support for various ways of handling enums in Elm.
