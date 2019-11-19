@@ -3,7 +3,7 @@
     "name": "the-sett/elm-enum",
     "summary": "Support for enums in Elm.",
     "license": "BSD-3-Clause",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "exposed-modules": [
         "Enum"
     ],
